@@ -10,6 +10,7 @@
 #include <WiFiClient.h>
 #include <NTPClient.h>
 #include <PubSubClient.h>
+#include "config.h" // Remove if not using
 #include "logo.h"
 
 #define TFTW            320     // screen width
@@ -17,12 +18,12 @@
 #define TFTW2           160     // half screen width
 #define TFTH2           120     // half screen height
 
-const char* ssid ="MIAC_iot"; //replace this with your wifi  name
-const char* password ="Aut0mati0n"; //replace with your wifi password
-const char* mqttServer = "soerenholm.duckdns.org";
+const char* ssid = SSID; //replace this with your wifi  name
+const char* password = WIFI_PASSWORD; //replace with your wifi password
+const char* mqttServer = MQTT_SERVER; //replace with your mqtt broker IP
 const int mqttPort = 1883;
-const char* mqttUser = "miac";
-const char* mqttPassword = "Aut0mati0n";
+const char* mqttUser = MQTT_USER; //replace with your mqtt user name
+const char* mqttPassword = MQTT_PASSWORD; //replace with your mqtt password 
 const long utcOffsetInSeconds = 25200; // utc + 7 hour
 
 class KbdRptParser : public KeyboardReportParser
