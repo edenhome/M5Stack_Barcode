@@ -2,4 +2,7 @@
 
 Using M5 stack gray and usb host module
 
-ready barcode and send to mqtt broker
+read barcode and send to mqtt broker
+
+
+the logo.h file can easy be change to show a diffent logo
